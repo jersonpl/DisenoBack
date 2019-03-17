@@ -20,6 +20,7 @@ app.get('/', (req,res) =>{
             })
         }
     });
+    con.end();
 });
 
 
@@ -51,6 +52,7 @@ server.on('message', (msg,rinfo) =>{
         if (err) throw err;
         console.log("Number of records inserted: " + result.affectedRows);
     });
+    con.end();
 });
 
 server.bind(45826);
