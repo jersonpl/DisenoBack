@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initiak-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+    <title>Telemetría</title>
+
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYNzG1CYSeQy-CEC3qAXca5-cmj-Cd6ho&callback=initMap"></script>
+    -->
+    <!--BOOTSTRAO CDN-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+
+</head>
+
+<body>
+
+
+    <!--Navigation-->
+    <nav class="navbar navbar-light bg-light" id = "navbar">
+        <a href="/" class="navbar-brand mx-auto">
+            Datos Ubicación
+        </a>
+    </nav>
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% //refresh = function(){ %>
+            <% for(var i = 0; i < datos.length; i++){ %>
+            <tr>
+                <td id = ID><%= datos[i].ID        %></td>
+                <td id = Fecha><%= datos[i].Fecha     %></td>
+                <td id = Latitud><%= datos[i].Latitud   %></td>
+                <td id = Longitud><%= datos[i].Longitud  %></td>
+            </tr>
+            <% } %>
+            <% //} %>
+            <% //setInterval(refresh, 5000); %>
+        </tbody>
+    </table>
+
+    <script>var name = "<%= datos %>";</script>
+
+    <!--BOOTSTRAO CDN
+
+    <nav class="navbar navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            Ubicación en el mapa
+        </a>
+    </nav>
+
+    
+    <script defer src="datos.js"></script>
+
+    <div id="mapa" style="width: 100%; height: 420px"></div>
+        -->
+
+
+
+
+</body>
+
+</html>

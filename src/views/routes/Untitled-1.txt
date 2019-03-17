@@ -1,0 +1,10 @@
+<tbody>
+            <% for(var i = 0; i < datos.length; i++){ %>
+            <tr>
+                <td><%= datos[i].ID        %></td>
+                <td><%= datos[i].Fecha     %></td>
+                <td><%= datos[i].Latitud   %></td>
+                <td><%= datos[i].Longitud  %></td>
+            </tr>
+            <% } %>
+        </tbody>

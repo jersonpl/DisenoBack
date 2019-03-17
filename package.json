@@ -1,0 +1,26 @@
+{
+  "name": "Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "yarn": "^1.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
