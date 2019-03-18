@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get('/', (req,res) =>{
     var con = dbConnections();
-    con.query('SELECT * FROM syrus order by ID desc limit 1', function (err, results) {
+    con.query('SELECT * FROM dsyrus order by ID desc limit 1', function (err, results) {
         if (err){
             return res.send(err)
         }else{
@@ -32,7 +32,7 @@ app.listen(4000, () =>{
 server.on('message', (msg,rinfo) =>{
     var mes = msg.toString();
     var con = dbConnections();
-    var sql = "INSERT INTO `syrus` (`ID`, `Fecha`, `Latitud`, `Longitud`) VALUES ?;";
+    var sql = "INSERT INTO `dsyrus` (`ID`, `Fecha`, `Latitud`, `Longitud`) VALUES ?;";
     console.log(mes.substring(1,4));
     if (mes.substring(1, 4) == "REV") {
         semanas = mes.substring(6, 10);
